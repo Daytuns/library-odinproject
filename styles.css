@@ -1,0 +1,146 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100vh;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: arial, sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    margin:0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#NewBookButton {
+    margin-top: 20px;
+}
+
+#NewBookButton {
+  --color: #0077ff;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+}
+
+#NewBookButton::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+#NewBookButton:hover {
+  color: white;
+}
+
+#NewBookButton:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+#NewBookButton:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: 30%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  width: 100%;
+  right: 2px;
+  display: flex;
+  justify-content: end;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+input{
+    width: 100%;
+    height: 35px;
+}
+
+.read_cell {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
